@@ -1,26 +1,15 @@
-Project Title: TechnoHacks Software Testing Task 5: API Testing
+# Project Title: TechnoHacks Software Testing Task 5: API Testing
 
-Index
-Objective..........................Line 14
-API Overview.......................Line 17
-Tools Used.........................Line 20
-Test Cases.........................Line 23
-Test Execution.....................Line 73
-Results............................Line 79
-Observations.......................Line 82
-Conclusion.........................Line 87
-Video Documentation................Line 90
-
-Objective
+## Objective
 The objective of this project is to conduct testing of a RESTful API using Postman to validate its functionality, reliability, and performance. By executing some sample test cases on various endpoints, we aim to ensure the API responds correctly and meets expected behavior, ultimately enhancing its robustness for end-users.
 
-API Overview
+## API Overview
 The Sample API is a RESTful service for managing user data, offering key functionalities such as Create User, Retrieve User, Update User & Delete User. The API returns standard HTTP status codes and JSON responses, serving as a critical component for applications requiring user management.
 
-Tools Used
+## Tools Used
 Postman: Version 11.37.1.0
 
-Test Cases
+## Test Cases
 S.No	Request Type/ Method	Scenario Title	Expected Outcome	Actual Outcome	Notes
 1	GET	Valid URL	200 OK	200 OK	Successful test
 2	GET	Invalid URL	404 NOT FOUND	404 NOT FOUND	Successful test
@@ -70,21 +59,21 @@ S.No	Request Type/ Method	Scenario Title	Expected Outcome	Actual Outcome	Notes
 46	OPTIONS	Invalid Query Parameters	204 NO CONTENT	204 NO CONTENT	Successful test
 47	OPTIONS	No Resource URL	204 NO CONTENT	204 NO CONTENT	Successful test
 
-Test Execution
+## Test Execution
 Executed tests using Postman Collections.
 URL used: https://jsonplaceholder.typicode.com/users
 https://jsonplaceholder.typicode.com/posts
 https://jsonplaceholder.typicode.com/posts/1
 
-Results
+## Results
 Total Tests: 47 (All passed successfully)
 
-Observations 
+## Observations 
 It has also been observed that behavior of JSONPlaceholder does not give the expected responses. This is due to the nature of the API, which is a fake REST API for testing.
 This API returns predefined responses. A GET request to https://jsonplaceholder.typicode.com/users provides a list of users. If an invalid ID is requested (e.g., https://jsonplaceholder.typicode.com/users/999), it still returns a 200 OK status with an empty array instead of a 404 Not Found.
 As a testing tool, JSONPlaceholder lacks strict validation and error handling typical of production APIs, which has led to several failed cases. To rectify this, the expected outcomes have been updated to accommodate these new changes. 
 
-Conclusion
+## Conclusion
 The API is functioning as expected with no issues found during testing.
 
 Video Documentation
